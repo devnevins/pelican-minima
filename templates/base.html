@@ -22,8 +22,8 @@
   
           <div class="trigger">
             <a class="page-link" href="{{ SITEURL }}/pages/about.html">About</a>
-            {% for category in categories|sort %}
-            <a class="page-link" href="{{ SITEURL }}/category/{{ category[0] }}.html">{{ category[0] }}</a>
+            {% for category,articles in categories|sort %}
+              <a class="page-link" href="{{ SITEURL }}/category/{{ category|lower }}.html">{{ category|capitalize }}</a>
             {% endfor %}
           </div>
         </nav>
